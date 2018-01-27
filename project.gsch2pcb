@@ -1,0 +1,3 @@
+schematics multiplexer.sch
+m4-pcbdir /usr/share/pcb/m4
+output-name board
