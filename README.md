@@ -1,10 +1,10 @@
-# MyLEDCube
+# My LED Cube
 
 This is My 8x8x8 LED Cube project.
 
 ## Install toolchain
 
-All tools are under Ubuntu 16.04.
+Following tools are under Ubuntu 16.04.
 
 ### Install gEDA
 
@@ -13,6 +13,9 @@ http://www.geda-project.org/
 ### Install FlatCAM
 
 http://flatcam.org
+
+
+Following tools are under Windows. Becuase Candle doesn't support Linux x64.
 
 ### Install Candle
 

@@ -1,12 +1,12 @@
 # FlatCAM Project
 
-Generate cnc jobs for make PCB with CNC Router.
+Generate cnc jobs for making PCB with my 2418 CNC Router.
 
-## Tracking the silkscreen
-
-### About unit
+## About unit
 
 The default unit in FlatCAM is inch
+
+## Tracking the silkscreen LOGO
 
 ```
 1 inch = 25.4 mm
@@ -14,7 +14,7 @@ The default unit in FlatCAM is inch
 
 ### Generate geo object
 
-using method: http://caram.cl/software/flatcam/tracing-the-silkscreen-with-flatcam/
+Using this method: http://caram.cl/software/flatcam/tracing-the-silkscreen-with-flatcam/
 
 In FlatCAM Shell:
 
@@ -48,6 +48,8 @@ _**Note:** There's may be some bugs in FlatCAM, as export then import the same S
 
 ## Making bottom PCB milling CNC job
 
+Steps are:
+
 ### Generate Isolation Routing: `board.bottom.gbr` to `board.bottom.gbr_iso`
 
 With these options:
@@ -64,6 +66,14 @@ With these options:
 * Feed Rate: 3.0 inch/minute (76.2 mm/minute)
 * Tool dia: 0.024 inch( 0.6096 mm, because I ma using 0.6 mm dia milling head)
 
+### Export CNC job file
+
+Export CNC job file to `1_board_bottom.gcode`.
+
+## Making LOGO milling CNC job
+
+Normal routing with these options:
+
 ### Create CNC job: `logo-flip-vertical.svg` to `logo-flip-vertical.svg_cnc`
 
 With these options:
@@ -71,6 +81,14 @@ With these options:
 * Cut Z: 0.001 ( 0.0254 mm, 0.05 mm seems too much)
 * Feed Rate: 3.0 inch/minute (76.2 mm/minute)
 * Tool dia: 0.024 inch( 0.6096 mm, because I ma using 0.6 mm dia milling head)
+
+### Export CNC job file
+
+Export CNC job file to `2_logo.gcode`.
+
+## Making plated drill CNC job
+
+Normal routing with these options:
 
 ### Create plated drill hole CNC job `board.plated-drill.cnc` to `board.plated-drill.cnc_cnc`
 
@@ -82,6 +100,14 @@ With tese options:
 
 _**Note:** I use 0.8mm drill head to drill to these holes_
 
+### Export CNC job file
+
+Export CNC job file to `3_plated_drill.gcode`.
+
+## Making unplated drill CNC job
+
+Normal routing with these options:
+
 ### Create unplated drill hole CNC job `board.unplated-drill.cnc` to `board.unplated-drill.cnc_cnc`
 
 With tese options:
@@ -91,3 +117,8 @@ With tese options:
 * Feed Rate: 3.0 inch/minute (76.2mm/minute)
 
 _**Note:** I use 3mm drill head to drill these holes_
+
+### Export CNC job file
+
+Export CNC job file to `4_plated_drill.gcode`.
+
