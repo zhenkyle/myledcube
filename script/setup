@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# script/setup: Set up application for the first time after cloning, or set it
+#               back to the initial first unused state.
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+script/bootstrap
+
+
+if [ -f "/usr/bin/xgsch2pcb" ]; then
+   echo "==> gEda App is now ready to go!"
+   (xgsch2pcb project.gsch2pcb)
+fi
+
