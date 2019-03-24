@@ -9,8 +9,8 @@ cd "$(dirname "$0")/.."
 
 if [ "$(uname -s)" = "Linux" ] && [ -f "/etc/debian_version" ]; then
 
-  # Install avr-gcc if needed
-  which avr-gcc >/dev/null 2>&1  || {
+  # Install geda if needed
+  which xgsch2pcb >/dev/null 2>&1  || {
     echo "==> Installing Dependencie"
     sudo apt-get update && sudo apt-get install -y geda geda-xgsch2pcb
   }
