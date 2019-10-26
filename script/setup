@@ -11,7 +11,10 @@ script/bootstrap
 
 
 if [ -f "/usr/bin/xgsch2pcb" ]; then
-   echo "==> gEda App is now ready to go!"
-   (xgsch2pcb project.gsch2pcb)
+    echo "==> gEda App is now ready to go!"
+    (xgsch2pcb project.gsch2pcb)
+elif [ -f "/usr/bin/gsch2pcb" ]; then
+    echo "==> gEda App is now ready to go!"
+    (gschem multiplexer.sch)
 fi
 
