@@ -22,6 +22,6 @@ elif [ "$(uname -s)" = "Linux" ] && [ -f "/etc/arch-release" ]; then
     sudo pacman -S geda-gaf pcb
   }
 else
-  echo "Sorry, only support Debain system."
+  echo "Sorry, only support Debain or Archlinux system."
   exit 1
 fi
